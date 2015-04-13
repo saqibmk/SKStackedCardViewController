@@ -13,6 +13,10 @@
 		60A0D7581AD88859003C7092 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A0D7571AD88859003C7092 /* Images.xcassets */; };
 		60A0D75B1AD88859003C7092 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A0D7591AD88859003C7092 /* LaunchScreen.xib */; };
 		60A0D7671AD88859003C7092 /* SKStackedCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D7661AD88859003C7092 /* SKStackedCollectionViewTests.swift */; };
+		60A0D7711AD8CFB2003C7092 /* SKStackedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D7701AD8CFB2003C7092 /* SKStackedCollectionViewController.swift */; };
+		60A0D7731AD8D03B003C7092 /* SKCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D7721AD8D03B003C7092 /* SKCollectionViewCell.swift */; };
+		60A0D7751AD8DD88003C7092 /* SKCollectionViewStackedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0D7741AD8DD88003C7092 /* SKCollectionViewStackedLayout.swift */; };
+		60B5D5501ADB522100BFDDD3 /* SKCollectionViewExposedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B5D54F1ADB522100BFDDD3 /* SKCollectionViewExposedLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		60A0D7601AD88859003C7092 /* SKStackedCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKStackedCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A0D7651AD88859003C7092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A0D7661AD88859003C7092 /* SKStackedCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKStackedCollectionViewTests.swift; sourceTree = "<group>"; };
+		60A0D7701AD8CFB2003C7092 /* SKStackedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStackedCollectionViewController.swift; sourceTree = "<group>"; };
+		60A0D7721AD8D03B003C7092 /* SKCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCollectionViewCell.swift; sourceTree = "<group>"; };
+		60A0D7741AD8DD88003C7092 /* SKCollectionViewStackedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCollectionViewStackedLayout.swift; sourceTree = "<group>"; };
+		60B5D54F1ADB522100BFDDD3 /* SKCollectionViewExposedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCollectionViewExposedLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,8 @@
 			children = (
 				60A0D7501AD88859003C7092 /* AppDelegate.swift */,
 				60A0D7521AD88859003C7092 /* ViewController.swift */,
+				60A0D7721AD8D03B003C7092 /* SKCollectionViewCell.swift */,
+				60B5D54E1ADB4A1200BFDDD3 /* SKStackedCollectionView */,
 				60A0D7541AD88859003C7092 /* Main.storyboard */,
 				60A0D7571AD88859003C7092 /* Images.xcassets */,
 				60A0D7591AD88859003C7092 /* LaunchScreen.xib */,
@@ -110,6 +120,16 @@
 				60A0D7651AD88859003C7092 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60B5D54E1ADB4A1200BFDDD3 /* SKStackedCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				60A0D7701AD8CFB2003C7092 /* SKStackedCollectionViewController.swift */,
+				60A0D7741AD8DD88003C7092 /* SKCollectionViewStackedLayout.swift */,
+				60B5D54F1ADB522100BFDDD3 /* SKCollectionViewExposedLayout.swift */,
+			);
+			name = SKStackedCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				60A0D7531AD88859003C7092 /* ViewController.swift in Sources */,
+				60A0D7711AD8CFB2003C7092 /* SKStackedCollectionViewController.swift in Sources */,
+				60A0D7731AD8D03B003C7092 /* SKCollectionViewCell.swift in Sources */,
+				60A0D7751AD8DD88003C7092 /* SKCollectionViewStackedLayout.swift in Sources */,
 				60A0D7511AD88859003C7092 /* AppDelegate.swift in Sources */,
+				60B5D5501ADB522100BFDDD3 /* SKCollectionViewExposedLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +429,7 @@
 				60A0D76C1AD88859003C7092 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60A0D76D1AD88859003C7092 /* Build configuration list for PBXNativeTarget "SKStackedCollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +438,7 @@
 				60A0D76F1AD88859003C7092 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

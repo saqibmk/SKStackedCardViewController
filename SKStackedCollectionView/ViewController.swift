@@ -8,7 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+let reuseIdentifier = "cell"
+
+@IBDesignable class ViewController: SKStackedCollectionViewController {
+    
+    func getRandomColor() -> UIColor{
+        
+        var randomRed:CGFloat = CGFloat(drand48())
+        
+        var randomGreen:CGFloat = CGFloat(drand48())
+        
+        var randomBlue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +33,23 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //#warning Incomplete method implementation -- Return the number of items in the section
+        return 3
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SKCollectionViewCell
+        
+        // Configure the cell
+        cell.layer.cornerRadius = 15;
+        cell.label?.text = "HELLO"
+        cell.backgroundColor = getRandomColor()
+        return cell
+    }
+    
+    
 
 }
 
